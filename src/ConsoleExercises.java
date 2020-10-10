@@ -8,6 +8,15 @@ public class ConsoleExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter an integer. ");
         int userInt=scanner.nextInt();
-        System.out.print("You entered: "+userInt);
+        System.out.println("You entered: "+userInt);
+
+        System.out.print("Please enter three words, separated by a space. ");
+        String str1 = scanner.next();
+        String str2 = scanner.next();
+        String str3 = scanner.next();
+
+        System.out.println(str1);
+        System.out.println(str2);
+        System.out.println(str3);
     }
 }
