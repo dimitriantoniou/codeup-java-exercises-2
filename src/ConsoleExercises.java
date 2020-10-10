@@ -25,5 +25,15 @@ public class ConsoleExercises {
         System.out.println(sentence);
 
         //skips the sentence input when run
+
+        Scanner classroom = new Scanner(System.in);
+        System.out.printf("How wide is Codeup\'s classroom? ");
+        float classroomWidth = Float.parseFloat(classroom.nextLine());
+        System.out.printf("How long is Codeup\'s classroom? ");
+        float classroomLength = Float.parseFloat(classroom.nextLine());
+        float area = classroomWidth * classroomLength;
+        float perimeter = (classroomWidth*2)+(classroomLength*2);
+        System.out.printf("Area: %f%n",area);
+        System.out.printf("Perimeter: %f%n",perimeter);
     }
 }
