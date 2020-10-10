@@ -18,5 +18,12 @@ public class ConsoleExercises {
         System.out.println(str1);
         System.out.println(str2);
         System.out.println(str3);
+
+        System.out.print("Please enter a sentence. ");
+        //String sentence = scanner.next();
+        String sentence = scanner.nextLine();
+        System.out.println(sentence);
+
+        //skips the sentence input when run
     }
 }
