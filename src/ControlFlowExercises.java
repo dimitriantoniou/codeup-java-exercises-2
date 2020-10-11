@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main (String[] args){
         //Loop Basics
@@ -64,6 +66,21 @@ public class ControlFlowExercises {
             }else{
                 System.out.println(f);
             }
+        }
+    //Display a table of powers.
+        //
+        //Prompt the user to enter an integer.
+        //Display a table of squares and cubes from 1 to the value entered.
+        //Ask if the user wants to continue.
+        //Assume that the user will enter valid data.
+        //Only continue if the user agrees to.
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Would you like to play a game? Y/N");
+        String userInput=sc.next();
+        while (userInput.equalsIgnoreCase("y")){
+            System.out.println("Please enter an integer.");
+            int userInt=sc.nextInt();
+            System.out.println(userInt);
         }
     }
 }
