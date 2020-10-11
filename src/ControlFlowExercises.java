@@ -80,7 +80,14 @@ public class ControlFlowExercises {
         while (userInput.equalsIgnoreCase("y")){
             System.out.println("Please enter an integer.");
             int userInt=sc.nextInt();
-            System.out.println(userInt);
-        }
+            System.out.println("You entered: "+userInt+". Here is your table of powers:");
+            System.out.println("Number | Squared | Cubed");
+            System.out.println("------ | ------- | -----");
+            for(int w =1;w<=userInt;w++){
+                System.out.println(w+"     | "+Math.pow(w,2)+"     | "+Math.pow(w,3)+"    ");
+            }
+            System.out.println("Would you like to play again? Y/N");
+            userInput=sc.next();
+        }System.out.println("Thanks for playing!");
     }
 }
