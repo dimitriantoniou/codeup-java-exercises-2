@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class ControlFlowExercises {
     public static void main (String[] args){
         //Loop Basics
@@ -89,5 +91,42 @@ public class ControlFlowExercises {
             System.out.println("Would you like to play again? Y/N");
             userInput=sc.next();
         }System.out.println("Thanks for playing!");
+
+        //Convert given number grades into letter grades.
+        //
+        //Prompt the user for a numerical grade from 0 to 100.
+        //Display the corresponding letter grade.
+        //Prompt the user to continue.
+        //Assume that the user will enter valid integers for the grades.
+        //The application should only continue if the user agrees to.
+        //Grade Ranges:
+        //
+        //A : 100 - 88
+        //B : 87 - 80
+        //C : 79 - 67
+        //D : 66 - 60
+        //F : 59 - 0
+
+        Scanner grades=new Scanner(System.in);
+        System.out.println("Would you like to view current grades? y/n");
+        String userResponse=grades.next();
+        while (userResponse.equalsIgnoreCase("y")) {
+            System.out.println("Please enter a grade from 0 to 100.");
+            int userGrade = parseInt(grades.next());
+            System.out.println("You entered: " + userGrade);
+            if (userGrade >= 88) {
+                System.out.println("A");
+            } else if (userGrade >= 80) {
+                System.out.println("B");
+            } else if (userGrade >= 67) {
+                System.out.println("C");
+            } else if (userGrade >= 60) {
+                System.out.println("D");
+            } else {
+                System.out.println("F");
+            }
+            System.out.println("Would you like to run it back?");
+            userResponse = sc.next();
+        }System.out.println("Thanks!");
     }
 }
