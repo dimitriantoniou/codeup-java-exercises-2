@@ -64,10 +64,39 @@ public class MethodsExercises {
             getInteger(min,max);
         }else{
             System.out.println("That works!");
+            //System.out.prtinln("Would you like to play again? y/n")''
         }
         return userInput;
     }
 
+    //Calculate the factorial of a number.
+    //
+    //Prompt the user to enter an integer from 1 to 10.
+    //Display the factorial of the number entered by the user.
+    //Ask if the user wants to continue.
+    //Use a for loop to calculate the factorial.
+    //Assume that the user will enter an integer, but verify it’s between 1 and 10.
+    //Use the long type to store the factorial.
+    //Continue only if the user agrees to.
+    //A factorial is a number multiplied by each of the numbers before it.
+    //Factorials are denoted by the exclamation point (n!). Ex:
+
+    public static void Factorial(int n) {
+        Scanner factorial = new Scanner(System.in);
+        System.out.println("Would you like to find a factorial? y/n");
+        String userContinue = factorial.next();
+        while (userContinue.equalsIgnoreCase("y")) {
+            System.out.println("Please enter an integer between 1 and 10.");
+            int userInt = Integer.parseInt(factorial.next());
+            int product = 1;
+            for (int i = 1; i <= userInt; i++) {
+                product *= i;
+            }
+            System.out.print(product);
+            System.out.println("Would you like to find a factorial? y/n");
+            userContinue=factorial.next();
+        }System.out.println("Thanks for palying!");
+    }
 
     public static void main(String[] args){
         Addition(1,1);
@@ -77,5 +106,6 @@ public class MethodsExercises {
         Modulus(6,3);
 
         getInteger(1,10);
+        Factorial(3);
     }
 }
