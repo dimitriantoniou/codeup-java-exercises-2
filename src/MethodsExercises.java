@@ -58,9 +58,14 @@ public class MethodsExercises {
         int userInput = Integer.parseInt(scanner.next());
         if (userInput<min){
             System.out.println("Sorry, that's too low. Try again!");
+            getInteger(min,max);
         }else if(userInput>max){
             System.out.println("Sorry, that's too high. Try again!");
-        }System.out.println("That works!");
+            getInteger(min,max);
+        }else{
+            System.out.println("That works!");
+        }
+        return userInput;
     }
 
 
@@ -71,6 +76,6 @@ public class MethodsExercises {
         Division(10,2);
         Modulus(6,3);
 
-
+        getInteger(1,10);
     }
 }
