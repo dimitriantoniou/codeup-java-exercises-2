@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
 
     //Basic Arithmetic
@@ -35,11 +37,40 @@ public class MethodsExercises {
         return a%b;
     }
 
+    //Create a method that validates that user input is in a certain range
+    //
+    //The method signature should look like this:
+    //
+    //
+    //public static int getInteger(int min, int max);
+    //and is used like this:
+    //
+    //
+    //System.out.print("Enter a number between 1 and 10: ");
+    //int userInput = getInteger(1, 10);
+    //If the input is invalid, prompt the user again.
+    //
+    //Hint: recursion might be helpful here!
+
+    public static int getInteger(int min, int max){
+        System.out.print("Enter a number between 1 and 10: ");
+        Scanner scanner = new Scanner(System.in);
+        int userInput = Integer.parseInt(scanner.next());
+        if (userInput<min){
+            System.out.println("Sorry, that's too low. Try again!");
+        }else if(userInput>max){
+            System.out.println("Sorry, that's too high. Try again!");
+        }System.out.println("That works!");
+    }
+
+
     public static void main(String[] args){
         Addition(1,1);
         Subtraction(4,2);
         Multiplication(2,2);
         Division(10,2);
         Modulus(6,3);
+
+
     }
 }
