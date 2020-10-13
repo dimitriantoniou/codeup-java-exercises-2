@@ -81,7 +81,7 @@ public class MethodsExercises {
     //A factorial is a number multiplied by each of the numbers before it.
     //Factorials are denoted by the exclamation point (n!). Ex:
 
-    public static void Factorial(int n) {
+    public static void Factorial() {
         Scanner factorial = new Scanner(System.in);
         System.out.println("Would you like to find a factorial? y/n");
         String userContinue = factorial.next();
@@ -106,7 +106,7 @@ public class MethodsExercises {
     //Use static methods to implement the method(s) that generate the random numbers.
     //Use the .random method of the java.lang.Math class to generate random numbers.
 
-    public static void Dice(int n){
+    public static void Dice(){
         Scanner dice = new Scanner(System.in);
         System.out.println("How many sides on your dice?");
         int diceSides=Integer.parseInt(dice.next());
@@ -128,7 +128,7 @@ public class MethodsExercises {
         Modulus(6,3);
 
         getInteger(1,10);
-        Factorial(3);
-        Dice(4);
+        Factorial();
+        Dice();
     }
 }
