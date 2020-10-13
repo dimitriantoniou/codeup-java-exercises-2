@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HighLow {
     //Game Development 101
     //
@@ -14,11 +16,32 @@ public class HighLow {
     //If user's guess is more than the number, it outputs "LOWER".
     //If a user guesses the number, the game should declare "GOOD GUESS!"
 
-    public static void Game(int n) {
-        System.out.println("Hello! Would you like to play a game?");
+    public static void Game() {
+        System.out.println("Hello! Would you like to play a game? y/n");
+        Scanner play= new Scanner(System.in);
+        String userPlay=play.next();
+        while(userPlay.equalsIgnoreCase("y")){
+            System.out.println("Please enter a number between 1 and 100.");
+            int userInput=Integer.parseInt(play.next());
+            int randomNumber=(int)(Math.random() * 100);
+            if (userInput<=0 || userInput>100){
+                //need to validate user input is an int
+                System.out.println("That is not within range. Please try again.");
+                userInput=Integer.parseInt(play.next());
+            }if (userInput==randomNumber){
+                System.out.println("GOOD GUESS!");
+            }else if(userInput<randomNumber){
+                System.out.println("Higher");
+                System.out.println("Guess again?");
+            }else if(userInput>randomNumber){
+                System.out.println("Lower");
+                System.out.println("Guess again? y/n.");
+            }System.out.println("Would you like to play again?");
+            userPlay=play.next();
+        }System.out.println("Thanks for playing!");
 
     }
     public static void main(String[] args){
-
+        Game();
     }
 }
