@@ -98,6 +98,28 @@ public class MethodsExercises {
         }System.out.println("Thanks for palying!");
     }
 
+    //Create an application that simulates dice rolling.
+    //
+    //Ask the user to enter the number of sides for a pair of dice.
+    //Prompt the user to roll the dice.
+    //"Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+    //Use static methods to implement the method(s) that generate the random numbers.
+    //Use the .random method of the java.lang.Math class to generate random numbers.
+
+    public static void Dice(int n){
+        Scanner dice = new Scanner(System.in);
+        System.out.println("How many sides on your dice?");
+        int diceSides=Integer.parseInt(dice.next());
+        System.out.println("Would you like to roll the dice? y/n");
+        String userContinue = dice.next();
+        while (userContinue.equalsIgnoreCase("y")){
+            int dice1=(int)(Math.random() * diceSides);
+            int dice2=(int)(Math.random()*diceSides);
+            System.out.printf("You rolled %d and %d. Would you like to roll again? y/n",dice1,dice2);
+            userContinue=dice.next();
+        }System.out.println("Thanks and buh bye.");
+    }
+
     public static void main(String[] args){
         Addition(1,1);
         Subtraction(4,2);
@@ -107,5 +129,6 @@ public class MethodsExercises {
 
         getInteger(1,10);
         Factorial(3);
+        Dice(4);
     }
 }
