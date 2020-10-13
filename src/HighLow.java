@@ -30,12 +30,13 @@ public class HighLow {
                 userInput=Integer.parseInt(play.next());
             }if (userInput==randomNumber){
                 System.out.println("GOOD GUESS!");
+                break;
             }else if(userInput<randomNumber){
                 System.out.println("Higher");
-                System.out.println("Guess again?");
+                continue;
             }else if(userInput>randomNumber){
                 System.out.println("Lower");
-                System.out.println("Guess again? y/n.");
+                continue;
             }System.out.println("Would you like to play again?");
             userPlay=play.next();
         }System.out.println("Thanks for playing!");
