@@ -6,12 +6,14 @@ public class Input {
     private Scanner scanner;
     //String getString()
     public String getString(){
-        System.out.println("Please enter your favorite color.");
-        String color = scanner.next();
-        System.out.println(color);
-        return color;
+        return scanner.nextLine();
     }
     //boolean yesNo()
+    public boolean yesNo(){
+        if(scanner.next().toLowerCase().contains("y")){
+            return true;
+        }return false;
+    }
     //int getInt(int min, int max)
     //int getInt()
     //double getDouble(double min, double max)
