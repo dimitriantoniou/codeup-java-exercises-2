@@ -35,7 +35,7 @@ public class Input {
         }return number;
     }
     //double getDouble()
-    public double getDouble(){
+    public static double getDouble(){
         return scanner.nextDouble();
     }
 }
