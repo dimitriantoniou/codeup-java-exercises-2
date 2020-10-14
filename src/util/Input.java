@@ -15,7 +15,27 @@ public class Input {
         }return false;
     }
     //int getInt(int min, int max)
+    public int getInt(int min, int max){
+        int number = scanner.nextInt();
+        if(number<min||number>max){
+            System.out.println("Please try again.");
+            number=scanner.nextInt();
+        }return number;
+    }
     //int getInt()
+    public int getINt(){
+        return scanner.nextInt();
+    }
     //double getDouble(double min, double max)
+    public double getDouble(double min, double max){
+        double number = scanner.nextDouble();
+        if(number<min||number>max){
+            System.out.println("Please try again.");
+            number=scanner.nextInt();
+        }return number;
+    }
     //double getDouble()
+    public double getDouble(){
+        return scanner.nextDouble();
+    }
 }
