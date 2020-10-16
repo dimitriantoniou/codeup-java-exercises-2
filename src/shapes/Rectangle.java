@@ -13,6 +13,7 @@ public class Rectangle {
     }
 
     //Create two methods on the Rectangle class, getArea and getPerimeter
+    // that return the respective values.
     public int getPerimeter(){
         int perimeter = 2*length+2*width;
         System.out.println("The perimeter is: "+perimeter);
@@ -23,6 +24,4 @@ public class Rectangle {
         System.out.println("The area is: "+area);
         return area;
     }
-
-    // that return the respective values. The formulas for both follow:
 }
