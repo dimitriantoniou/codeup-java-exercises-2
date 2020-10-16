@@ -9,9 +9,14 @@ public class Rectangle {
 
     public Rectangle(int length, int width){
         this.length=length;
-        this.width=width.
+        this.width=width;
     }
 
     //Create two methods on the Rectangle class, getArea and getPerimeter
+    public int getArea(){
+        int area = 2*length+2*width;
+        System.out.println("The area is: "+area);
+        return area;
+    }
     // that return the respective values. The formulas for both follow:
 }
