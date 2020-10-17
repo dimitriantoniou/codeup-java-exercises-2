@@ -1,9 +1,6 @@
 package shapes;
 
 public class Square extends Rectangle{
-
-
-    /* polymorphism and inheritance exercises
     public Square (double side){
         super(side,side);
         this.length=side;
@@ -22,6 +19,4 @@ public class Square extends Rectangle{
             System.out.println("The perimeter is: "+perimeter);
         }
     }
-
-     */
 }
