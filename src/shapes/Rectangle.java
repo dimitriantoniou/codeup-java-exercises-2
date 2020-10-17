@@ -1,6 +1,8 @@
 package shapes;
 
 public class Rectangle {
+
+    /* inheritance and polymorphism code
     //It should have protected properties for both length and width.
     // Rectangle should define a constructor that accepts two numbers for length and width,
     // and sets those properties.
@@ -24,4 +26,6 @@ public class Rectangle {
         System.out.println("The area is: "+area);
         return area;
     }
+
+     */
 }
