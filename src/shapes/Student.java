@@ -25,6 +25,14 @@ public class Student {
             sum +=grades.get(i);
         }
         int average = sum/grades.size();
+        System.out.println(average);
         return average;
+    }
+    public static void main(String[] args){
+        Student dimitri = new Student("Dimitri");
+        dimitri.grades.add(100);
+        dimitri.grades.add(80);
+        dimitri.grades.add(90);
+        dimitri.getGradeAverage();
     }
 }
